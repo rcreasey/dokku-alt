@@ -1,0 +1,13 @@
+image: dokku-alt/base
+
+script:
+- sed -i 's/linux-image-extra-virtual, //g' deb/dokku-alt/DEBIAN/control
+- make install
+- tests/run_localhost
+
+notify:
+  email:
+    recipients:
+      - ayufan@ayufan.eu
+    on_success: "true"
+    on_failure: "true"
