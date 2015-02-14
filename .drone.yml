@@ -11,3 +11,8 @@ notify:
       - ayufan@ayufan.eu
     on_success: "true"
     on_failure: "true"
+  webhook:
+    urls:
+      - https://webhooks.gitter.im/e/5b20ba0636288ad719dc
+    on_success: true
+    on_failure: true
